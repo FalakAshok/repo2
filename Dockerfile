@@ -14,4 +14,4 @@ RUN go build -o my-goapp .
 EXPOSE 8088
 
 # Specify the command to run your application
-CMD ["./main"]
+CMD ["./my-goapp]
