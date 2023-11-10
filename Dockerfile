@@ -8,10 +8,8 @@ WORKDIR /app
 COPY my-goapp.go .
 
 # Download dependencies
-RUN go mod download
-
 # Build the Go application
-RUN go build -o my-goapp .
+RUN go build -o my-goapp.go .
 
 # Expose a port if your Go application listens on a specific port
 EXPOSE 8088
