@@ -4,8 +4,7 @@ FROM golang:1.16
 WORKDIR /app
 
 # Copy the Go application code and go.mod/go.sum files to the container
-COPY go.mod .
-COPY go.sum .
+
 COPY my-goapp.go .
 
 # Download dependencies
