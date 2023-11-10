@@ -9,7 +9,7 @@ COPY my-goappp.go .
 
 # Download dependencies
 # Build the Go application
-RUN go build -o my-goappp.go .
+RUN go build -o my-goappp .
 
 # Expose a port if your Go application listens on a specific port
 EXPOSE 8088
