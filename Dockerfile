@@ -1,11 +1,15 @@
-# Use the official Golang image as the base image
 FROM golang:1.16
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the Go application code to the container
+# Copy the Go application code and go.mod/go.sum files to the container
+COPY go.mod .
+COPY go.sum .
 COPY my-goapp.go .
+
+# Download dependencies
+RUN go mod download
 
 # Build the Go application
 RUN go build -o my-goapp .
